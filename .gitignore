@@ -218,3 +218,25 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Slotor (repo public) ---
+# Medias bruts : photos avec EXIF/GPS + captures/visuels tiers. Ne jamais committer tels quels.
+# Les fixtures publiques vont dans tests/fixtures/ (EXIF supprime, droits verifies).
+medias/
+# Suivi d experiences et sorties locales
+mlruns/
+mlflow.db
+outputs/
+data/private/
+.env
+
+/docs/
+
+# Bases SQLite locales (donnees perso : inventaires, projets). Le seed JSON du catalogue, lui, est versionne.
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+
+# macOS
+.DS_Store

@@ -1,0 +1,14 @@
+# Light hooks (D17: public repository). Install with: uv run pre-commit install  (optional)
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.3
+    hooks:
+      - id: ruff
+      - id: ruff-format
+  - repo: local
+    hooks:
+      - id: no-private-media
+        name: refuse medias/ and docs/ (private, D17)
+        entry: "Refusing to commit private paths (medias/, docs/)."
+        language: fail
+        files: ^(medias|docs)/

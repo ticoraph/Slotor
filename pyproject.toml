@@ -1,0 +1,52 @@
+[project]
+name = "slotor"
+version = "0.0.1"
+description = "Longest closed-loop optimizer for Carrera Digital 132 slot-car tracks (independent project, not affiliated with Carrera)."
+readme = "README.md"
+requires-python = ">=3.11"
+# Runtime dependencies are added per phase (shapely in phase 1, gradio in phase 5, RL stack in phase 7).
+dependencies = [
+    "gradio>=6.31.0",
+    "shapely>=2.2.0",
+]
+
+[project.optional-dependencies]
+rl = [
+    "gymnasium>=1.4.0",
+    "mlflow>=3.18.0",
+    "sb3-contrib>=2.9.2",
+    "scipy>=1.17.1",
+    "stable-baselines3>=2.9.2",
+    "torch>=2.15.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "hypothesis>=6",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/slotor"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "N"]
+
+[tool.ruff.lint.per-file-ignores]
+# The report generator is mostly prose templates (French sentences); wrapping them hurts readability.
+"benchmarks/report.py" = ["E501"]

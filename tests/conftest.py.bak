@@ -1,0 +1,49 @@
+from __future__ import annotations
+
+import json
+import sqlite3
+from pathlib import Path
+
+import pytest
+
+from slotor.catalog import Catalog, import_seed, load_catalog
+from slotor.db import apply_migrations, connect
+
+FIXTURES = Path(__file__).parent / "fixtures"
+
+
+@pytest.fixture
+def conn() -> sqlite3.Connection:
+    connection = connect(":memory:")
+    apply_migrations(connection)
+    yield connection
+    connection.close()
+
+
+@pytest.fixture
+def seeded(conn: sqlite3.Connection) -> sqlite3.Connection:
+    import_seed(conn)
+    return conn
+
+
+@pytest.fixture
+def catalog(seeded: sqlite3.Connection) -> Catalog:
+    name = seeded.execute("SELECT name FROM catalog_version").fetchone()["name"]
+    return load_catalog(seeded, name)
+
+
+@pytest.fixture(scope="session")
+def golden_inventories() -> list[dict]:
+    return json.loads((FIXTURES / "golden_inventories.json").read_text(encoding="utf-8"))[
+        "inventories"
+    ]
+
+
+@functools.cache
+def cached_catalog() -> Catalog:
+    """One catalog for property-based tests (hypothesis forbids function-scoped fixtures)."""
+    connection = connect(":memory:")
+    apply_migrations(connection)
+    import_seed(connection)
+    name = connection.execute("SELECT name FROM catalog_version").fetchone()["name"]
+    return load_catalog(connection, name)

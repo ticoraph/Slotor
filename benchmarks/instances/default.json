@@ -1,0 +1,13 @@
+{
+  "_comment": "Suite figee du benchmark (D12). split=test : evaluation uniquement ; l'entrainement RL tire ses instances de InstanceSampler (graines d'entrainement distinctes), jamais de ce fichier. golden_a / golden_b reprennent les captures Track Architect sans leurs pieces speciales (non modelisees) ; les autres sont des kits synthetiques.",
+  "instances": [
+    {"name": "kit_oval", "split": "test", "surface_mm": [1500, 800], "inventory": {"curve_r1_60": 6, "straight_345": 4}},
+    {"name": "kit_small", "split": "test", "surface_mm": [1400, 1200], "inventory": {"curve_r1_60": 6, "straight_345": 2, "straight_115": 3}},
+    {"name": "kit_mixed", "split": "test", "surface_mm": [2400, 1200], "inventory": {"curve_r1_60": 8, "curve_r1_30": 4, "straight_345": 10, "straight_115": 4, "straight_86_25": 2}},
+    {"name": "kit_r2", "split": "test", "surface_mm": [2600, 1600], "inventory": {"curve_r1_60": 8, "curve_r2_30": 6, "straight_345": 8, "straight_115": 2}},
+    {"name": "kit_wide", "split": "test", "surface_mm": [3200, 1200], "inventory": {"curve_r1_60": 12, "straight_345": 20}},
+    {"name": "kit_large", "split": "test", "surface_mm": [3000, 2000], "inventory": {"curve_r1_60": 10, "curve_r2_30": 12, "curve_r3_30": 6, "straight_345": 12, "straight_115": 6}},
+    {"name": "golden_a", "split": "test", "surface_mm": [3000, 1440], "inventory": {"curve_r1_60": 13, "curve_r2_30": 6, "straight_345": 9, "straight_115": 6}},
+    {"name": "golden_b", "split": "test", "surface_mm": [2680, 1840], "inventory": {"curve_r1_60": 12, "straight_345": 16}}
+  ]
+}

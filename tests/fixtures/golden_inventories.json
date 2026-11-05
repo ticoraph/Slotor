@@ -1,0 +1,31 @@
+{
+  "_comment": "Inventaires d'or : texte d'export Track Architect D132 retranscrit a la main depuis les captures de l'utilisateur (aucune image committee, D17). surface_mm = emprise affichee par l'outil [largeur, profondeur]. Serviront aussi de circuits d'or en phase 1.",
+  "inventories": [
+    {
+      "name": "golden_a",
+      "surface_mm": [3000, 1440],
+      "export_text": "13x Curve 1/60 degrees, radius 39,6cm\n9x Straight, 34,5cm\n2x Double lane change (2)\n2x Double lane change (1)\n1x Control unit\n6x Curve 2/30 degrees, radius 59,4cm\n6x Straight 1/3, 11,5cm",
+      "counts": {
+        "curve_r1_60": 13,
+        "straight_345": 9,
+        "lane_change_double_2": 2,
+        "lane_change_double_1": 2,
+        "control_unit": 1,
+        "curve_r2_30": 6,
+        "straight_115": 6
+      }
+    },
+    {
+      "name": "golden_b",
+      "surface_mm": [2680, 1840],
+      "export_text": "12x Curve 1/60 degrees, radius 39,6cm\n16x Straight, 34,5cm\n1x Control unit\n2x Double lane change (2)\n2x Double lane change (1)",
+      "counts": {
+        "curve_r1_60": 12,
+        "straight_345": 16,
+        "control_unit": 1,
+        "lane_change_double_2": 2,
+        "lane_change_double_1": 2
+      }
+    }
+  ]
+}

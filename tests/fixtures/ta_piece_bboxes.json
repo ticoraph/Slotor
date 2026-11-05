@@ -1,0 +1,28 @@
+{
+  "_comment": "Cotes d'emprise (largeur x hauteur, en cm, affichees a 0,1 cm) de chaque piece dans l'interface Track Architect D132, relevees par l'utilisateur sur 22 captures (medias/Tracks_Sizes, non committees). Ce sont les cotes de la geometrie de l'OUTIL, pas des mesures physiques. orientation : symmetric = piece centree sur l'axe du virage (centre sous la piece) ; start_face_vertical = face d'entree verticale (K1/30) ; axis = rectangle. slug null = identite a confirmer avec l'utilisateur (le nom TA exact n'apparait pas sur la capture). ref = reference de lot a 5 chiffres fournie par l'utilisateur (non verifiee contre une capture quand ref_note/note le signale) ; les pieces speciales sont hors perimetre de la phase 1 (a modeliser plus tard).",
+  "display_resolution_cm": 0.1,
+  "pieces": [
+    {"label": "1/1", "slug": "straight_345", "bbox_cm": [34.5, 19.8], "orientation": "axis"},
+    {"label": "1/3", "slug": "straight_115", "bbox_cm": [11.5, 19.8], "orientation": "axis"},
+    {"label": "1/4", "slug": "straight_86_25", "bbox_cm": [8.6, 19.8], "orientation": "axis"},
+    {"label": "K1/30", "slug": "curve_r1_30", "bbox_cm": [19.8, 22.5], "orientation": "start_face_vertical"},
+    {"label": "K1/60", "slug": "curve_r1_60", "bbox_cm": [39.6, 22.5], "orientation": "symmetric"},
+    {"label": "K2/30", "slug": "curve_r2_30", "bbox_cm": [30.7, 21.1], "orientation": "symmetric"},
+    {"label": "K3/30", "slug": "curve_r3_30", "bbox_cm": [41.0, 21.8], "orientation": "symmetric"},
+    {"label": "K4/15", "slug": "curve_r4_15", "bbox_cm": [25.8, 20.5], "orientation": "symmetric"},
+    {"label": "SW", "slug": null, "file": "14.11.47", "bbox_cm": [34.5, 19.8], "orientation": "axis", "note": "lanes converge toward the middle (not the 1.38 m narrow section); ref not given"},
+    {"label": "(no label, bracket marks)", "slug": null, "file": "14.11.59", "bbox_cm": [34.5, 19.8], "orientation": "axis"},
+    {"label": "WL", "slug": null, "ref": "30343", "file": "14.12.19", "bbox_cm": [69.0, 19.8], "orientation": "axis", "note": "2 x 34.5; catalog: lane change section left (30343)"},
+    {"label": "WR", "slug": null, "ref": "30345", "file": "14.12.33", "bbox_cm": [69.0, 19.8], "orientation": "axis", "note": "2 x 34.5; catalog: lane change section right (30345)"},
+    {"label": "WD", "slug": null, "ref": "30347", "file": "14.12.45", "bbox_cm": [69.0, 19.8], "orientation": "axis", "note": "2 x 34.5; catalog: double lane change section (30347)"},
+    {"label": "SG", "slug": null, "ref": "30356", "file": "14.12.58", "bbox_cm": [103.0, 29.7], "orientation": "axis", "note": "3 sections, side lane; displayed as 1.03 m"},
+    {"label": "single lane", "slug": null, "file": "14.13.18", "bbox_cm": [34.5, 9.9], "orientation": "axis", "note": "single lane straight; the palette lists Pit Lane Extension 30341"},
+    {"label": "WR curve, bends up", "slug": null, "ref": "30362", "file": "14.13.31", "bbox_cm": [68.8, 29.7], "orientation": "axis"},
+    {"label": "WL curve, bends up", "slug": null, "ref": "30363", "file": "14.13.45", "bbox_cm": [68.8, 29.7], "orientation": "axis"},
+    {"label": "WL curve, bends down", "slug": null, "ref": "30364", "file": "14.13.59", "bbox_cm": [68.8, 29.7], "orientation": "axis"},
+    {"label": "WR curve, bends down", "slug": null, "ref": "30365", "file": "14.14.10", "bbox_cm": [68.8, 29.7], "orientation": "axis"},
+    {"label": "narrow section A", "slug": null, "file": "14.14.23", "bbox_cm": [138.0, 19.8], "orientation": "axis", "ref": "30350", "ref_note": "30350/30351 = left/right pair; which of A/B is which is not confirmed", "note": "4 x 34.5 = 138 cm; two lanes merge into one. The printed catalog line says '4 x 34.5 cm = 69 cm': its arithmetic is wrong, 138 cm is consistent"},
+    {"label": "narrow section B", "slug": null, "file": "14.14.36", "bbox_cm": [138.0, 19.8], "orientation": "axis", "ref": "30351", "note": "mirror of A"},
+    {"label": "CU", "slug": "control_unit", "bbox_cm": [34.5, 34.7], "orientation": "axis", "note": "track 34.5 x 19.8 plus control block; 14.9 cm beyond the rail"}
+  ]
+}

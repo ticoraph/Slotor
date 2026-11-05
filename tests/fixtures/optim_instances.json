@@ -1,0 +1,10 @@
+{
+  "_comment": "Instances fixes des optimiseurs (phase 3). Inventaires et surfaces en mm. golden_a / golden_b reprennent les captures Track Architect ; les pieces sans modele geometrique (Control Unit, doubles lane changes) restent dans l'inventaire pour verifier qu'elles sont ignorees, jamais utilisees. Les trois autres sont des kits synthetiques.",
+  "instances": [
+    {"name": "kit_oval", "surface_mm": [1500, 800], "inventory": {"curve_r1_60": 6, "straight_345": 4}},
+    {"name": "kit_mixed", "surface_mm": [2400, 1200], "inventory": {"curve_r1_60": 8, "curve_r1_30": 4, "straight_345": 10, "straight_115": 4, "straight_86_25": 2}},
+    {"name": "kit_large", "surface_mm": [3000, 2000], "inventory": {"curve_r1_60": 10, "curve_r2_30": 12, "curve_r3_30": 6, "straight_345": 12, "straight_115": 6}},
+    {"name": "golden_a", "surface_mm": [3000, 1440], "inventory": {"curve_r1_60": 13, "curve_r2_30": 6, "straight_345": 9, "straight_115": 6, "control_unit": 1, "lane_change_double_1": 2, "lane_change_double_2": 2}},
+    {"name": "golden_b", "surface_mm": [2680, 1840], "inventory": {"curve_r1_60": 12, "straight_345": 16, "control_unit": 1, "lane_change_double_1": 2, "lane_change_double_2": 2}}
+  ]
+}

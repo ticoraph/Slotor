@@ -1,0 +1,7 @@
+{
+  "_comment": "Mini suite pour tester le lanceur de benchmark (deux instances, pas les vraies).",
+  "instances": [
+    {"name": "tiny_oval", "split": "test", "surface_mm": [1500, 800], "inventory": {"curve_r1_60": 6, "straight_345": 4}},
+    {"name": "tiny_small", "split": "test", "surface_mm": [1400, 1200], "inventory": {"curve_r1_60": 6, "straight_345": 2, "straight_115": 3}}
+  ]
+}
